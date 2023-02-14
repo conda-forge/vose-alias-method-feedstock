@@ -1,5 +1,5 @@
 {% set name = "Vose-Alias-Method" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0b55205c24d81ebbb1e2ae2fd7fc62f0bfb8e679ce6b84c778e34f4a0da2c0b7
+  sha256: 4f13c941d3e98699ee872db2da7d45ecd6782b431077163b4fbdd082edd57498
 
 build:
   number: 0
