@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4f13c941d3e98699ee872db2da7d45ecd6782b431077163b4fbdd082edd57498
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - vose-sampler=vose_sampler.vose_sampler:main
@@ -19,12 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python {{ python_min }}
   run:
-    - python >=2.7
+    - python >={{ python_min }}
 
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - vose_sampler
   commands:
