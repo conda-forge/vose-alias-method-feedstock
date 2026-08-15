@@ -1,16 +1,16 @@
 {% set name = "Vose-Alias-Method" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f13c941d3e98699ee872db2da7d45ecd6782b431077163b4fbdd082edd57498
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') | lower }}-{{ version }}.tar.gz
+  sha256: 1333655259733da6241c89e256d75ccd055c326b9e262ec3151c792048b3316b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - vose-sampler=vose_sampler.vose_sampler:main
